@@ -18,47 +18,53 @@ discord-news-bot/
 ```
 
 ### `news_bot.py`
+
 The core of the project. Contains:
+
 - RSS feed collection from 22 sources (12 general, 10 tech)
 - Gemini API integration for news analysis and summarization
 - Discord bot setup with scheduled and on-demand digest posting
 - Message chunking logic to respect Discord's 2000-character limit
 
 ### `requirements.txt`
+
 Lists all Python libraries the project depends on. Railway reads this file automatically to install dependencies before running the bot.
 
 ### `Procfile`
+
 Tells Railway's build system how to start the application. Uses `worker` (not `web`) because the bot does not serve HTTP requests.
 
 ### `.gitignore`
-Prevents the `.env` file and `bot.log` from being accidentally pushed to GitHub, keeping your credentials safe.
 
-### `.env` *(not included — create locally)*
+Prevents the `.env` file and `bot.log` from being accidentally pushed to GitHub.
+
+### `.env` _(not included — create locally)_
+
 Stores your secret credentials as environment variables. Never commit this file. On Railway, set these variables directly in the project's **Variables** tab.
 
 ---
 
 ## ⚙️ Environment Variables
 
-| Variable | Description |
-|---|---|
-| `DISCORD_TOKEN` | Your bot's token from the Discord Developer Portal |
-| `GEMINI_API_KEY` | Your API key from Google AI Studio |
+| Variable             | Description                                               |
+| -------------------- | --------------------------------------------------------- |
+| `DISCORD_TOKEN`      | Your bot's token from the Discord Developer Portal        |
+| `GEMINI_API_KEY`     | Your API key from Google AI Studio                        |
 | `DISCORD_CHANNEL_ID` | Numeric ID of the Discord channel where the bot will post |
 
 ---
 
 ## 📦 Libraries Used
 
-| Library | Purpose |
-|---|---|
-| `discord.py` | Discord bot framework |
-| `feedparser` | Parses RSS feeds from news outlets |
-| `google-generativeai` | Google Gemini API client |
-| `apscheduler` | Schedules the daily 6 AM digest |
-| `pytz` | Timezone handling (Brasília time) |
-| `aiohttp` | Async HTTP support |
-| `python-dotenv` | Loads environment variables from the `.env` file |
+| Library               | Purpose                                          |
+| --------------------- | ------------------------------------------------ |
+| `discord.py`          | Discord bot framework                            |
+| `feedparser`          | Parses RSS feeds from news outlets               |
+| `google-generativeai` | Google Gemini API client                         |
+| `apscheduler`         | Schedules the daily 6 AM digest                  |
+| `pytz`                | Timezone handling (Brasília time)                |
+| `aiohttp`             | Async HTTP support                               |
+| `python-dotenv`       | Loads environment variables from the `.env` file |
 
 Install all dependencies with:
 
@@ -112,15 +118,17 @@ The bot itself uses **Gemini 2.5 Flash** (by Google) at runtime to analyze the c
 
 ## 💬 Bot Commands
 
-| Command | Description |
-|---|---|
-| `!summary` | Generates and posts the news digest immediately |
-| `!status` | Shows the date and time of the next scheduled digest |
-| `!help` | Lists all available commands |
+| Command    | Description                                          |
+| ---------- | ---------------------------------------------------- |
+| `!summary` | Generates and posts the news digest immediately      |
+| `!status`  | Shows the date and time of the next scheduled digest |
+| `!help`    | Lists all available commands                         |
 
 ---
 
 ## 📡 News Sources
+
+The sources were selected based on my preferences and location, change any of them in `news_bot.py`, line 55 onwards.
 
 **General (12 feeds):** G1, Folha de S.Paulo (World, Brazil, Economy), UOL, Agência Brasil, BBC Brasil, BBC News, The New York Times, Reuters, The Guardian, Sky News
 
