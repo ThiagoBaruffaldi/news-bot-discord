@@ -1,0 +1,7 @@
+discord.py
+feedparser
+google-generativeai
+apscheduler
+pytz
+aiohttp
+python-dotenv
