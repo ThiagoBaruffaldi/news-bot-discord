@@ -56,20 +56,20 @@ Stores your secret credentials as environment variables. Never commit this file.
 
 ## 📦 Libraries Used
 
-| Library               | Purpose                                          |
-| --------------------- | ------------------------------------------------ |
-| `discord.py`          | Discord bot framework                            |
-| `feedparser`          | Parses RSS feeds from news outlets               |
-| `google-generativeai` | Google Gemini API client                         |
-| `apscheduler`         | Schedules the daily 6 AM digest                  |
-| `pytz`                | Timezone handling (Brasília time)                |
-| `aiohttp`             | Async HTTP support                               |
-| `python-dotenv`       | Loads environment variables from the `.env` file |
+| Library         | Purpose                                          |
+| --------------- | ------------------------------------------------ |
+| `discord.py`    | Discord bot framework                            |
+| `feedparser`    | Parses RSS feeds from news outlets               |
+| `google-genai`  | Google Gemini API client                         |
+| `apscheduler`   | Schedules the daily 6 AM digest                  |
+| `pytz`          | Timezone handling (Brasília time)                |
+| `aiohttp`       | Async HTTP support                               |
+| `python-dotenv` | Loads environment variables from the `.env` file |
 
 Install all dependencies with:
 
 ```bash
-pip install discord.py feedparser google-generativeai apscheduler pytz aiohttp python-dotenv
+pip install discord.py feedparser google-genai apscheduler pytz aiohttp python-dotenv
 ```
 
 ---

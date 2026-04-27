@@ -1,0 +1,46 @@
+2026-04-27 01:56:31,880 [WARNING] PyNaCl is not installed, voice will NOT be supported
+2026-04-27 01:56:31,881 [WARNING] davey is not installed, voice will NOT be supported
+2026-04-27 02:02:09,074 [WARNING] PyNaCl is not installed, voice will NOT be supported
+2026-04-27 02:02:09,075 [WARNING] davey is not installed, voice will NOT be supported
+2026-04-27 16:12:49,629 [WARNING] PyNaCl is not installed, voice will NOT be supported
+2026-04-27 16:12:49,629 [WARNING] davey is not installed, voice will NOT be supported
+2026-04-27 16:12:49,653 [INFO] logging in using static token
+2026-04-27 16:12:50,858 [INFO] Shard ID None has connected to Gateway (Session ID: 52cd4326e5ff73a4bf3b61c25479c827).
+2026-04-27 16:12:52,865 [INFO] Bot connected as Blauth#9779 (ID: 1497297373108637867)
+2026-04-27 16:12:52,867 [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-04-27 16:12:52,871 [INFO] Added job "daily_task" to job store "default"
+2026-04-27 16:12:52,872 [INFO] Scheduler started
+2026-04-27 16:12:52,873 [INFO] Scheduler active: daily digest at 06:00 (Brasília)
+2026-04-27 16:13:15,182 [INFO] !summary triggered by thaiga_b at 16:13
+2026-04-27 16:13:15,611 [INFO] Collecting general feeds...
+2026-04-27 16:13:16,071 [INFO] Feed OK: g1 — 10 items
+2026-04-27 16:13:16,347 [INFO] Feed OK: Folha de S.Paulo - Mundo - Principal — 10 items
+2026-04-27 16:13:16,579 [INFO] Feed OK: Folha de S.Paulo - Poder - Principal — 10 items
+2026-04-27 16:13:17,102 [INFO] Feed OK: https://feeds.folha.uol.com.br/folha/mercado/rss091.xml — 0 items
+2026-04-27 16:13:17,543 [INFO] Feed OK: UOL - Seu universo online — 10 items
+2026-04-27 16:13:17,804 [INFO] Feed OK: Feed Últimas — 10 items
+2026-04-27 16:13:20,879 [INFO] Feed OK: BBC Brasil — 10 items
+2026-04-27 16:13:21,279 [INFO] Feed OK: BBC News — 10 items
+2026-04-27 16:13:21,675 [INFO] Feed OK: NYT > World News — 10 items
+2026-04-27 16:13:21,757 [INFO] Feed OK: https://feeds.reuters.com/reuters/topNews — 0 items
+2026-04-27 16:13:22,531 [INFO] Feed OK: World news | The Guardian — 10 items
+2026-04-27 16:13:23,103 [INFO] Feed OK: World News - Breaking international news and headlines | Sky News — 10 items
+2026-04-27 16:13:23,105 [INFO] Collecting tech feeds...
+2026-04-27 16:13:23,570 [INFO] Feed OK: https://feeds.folha.uol.com.br/folha/tec/rss091.xml — 0 items
+2026-04-27 16:13:23,897 [INFO] Feed OK: g1 > Tecnologia — 10 items
+2026-04-27 16:13:25,660 [INFO] Feed OK: https://tecmundo.com.br/feed — 0 items
+2026-04-27 16:13:25,941 [INFO] Feed OK: https://www.tudocelular.com/feed/noticias.xml — 0 items
+2026-04-27 16:13:26,215 [INFO] Feed OK: Olhar Digital — 10 items
+2026-04-27 16:13:26,548 [INFO] Feed OK: TechCrunch — 10 items
+2026-04-27 16:13:27,943 [INFO] Feed OK: Ars Technica - All content — 10 items
+2026-04-27 16:13:28,419 [INFO] Feed OK: The Verge — 10 items
+2026-04-27 16:13:29,893 [INFO] Feed OK: Feed: All Latest — 10 items
+2026-04-27 16:13:30,695 [INFO] Feed OK: CNET — 10 items
+2026-04-27 16:13:30,696 [INFO] Total collected: 91 general | 70 tech
+2026-04-27 16:13:30,697 [INFO] Generating general summary with Gemini...
+2026-04-27 16:13:36,127 [INFO] AFC is enabled with max remote calls: 10.
+2026-04-27 16:13:57,361 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-04-27 16:13:57,372 [INFO] Generating tech summary with Gemini...
+2026-04-27 16:13:58,527 [INFO] AFC is enabled with max remote calls: 10.
+2026-04-27 16:14:27,082 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-04-27 16:14:31,432 [INFO] Digest posted successfully!

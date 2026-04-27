@@ -1,6 +1,6 @@
 discord.py
 feedparser
-google-generativeai
+google-genai
 apscheduler
 pytz
 aiohttp

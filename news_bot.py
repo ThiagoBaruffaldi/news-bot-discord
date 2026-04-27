@@ -22,7 +22,6 @@ from datetime import datetime
 
 import discord
 import feedparser
-import google.generativeai as genai
 import pytz
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from apscheduler.triggers.cron import CronTrigger
@@ -130,9 +129,12 @@ def build_news_block(articles: list[dict]) -> str:
 
 def call_gemini(prompt: str) -> str:
     """Sends the prompt to Gemini and returns the response as plain text."""
-    genai.configure(api_key=GEMINI_API_KEY)
-    model    = genai.GenerativeModel("gemini-2.5-flash")
-    response = model.generate_content(prompt)
+    from google import genai
+    client   = genai.Client(api_key=GEMINI_API_KEY)
+    response = client.models.generate_content(
+        model="gemini-2.5-flash",
+        contents=prompt,
+    )
     return response.text.strip()
 
 
@@ -314,7 +316,7 @@ async def run_pipeline(channel: discord.TextChannel, time: str = "06:00"):
 intents = discord.Intents.default()
 intents.message_content = True
 
-bot       = commands.Bot(command_prefix="!", intents=intents)
+bot = commands.Bot(command_prefix="!", intents=intents, help_command=None)
 scheduler = AsyncIOScheduler(timezone=BRASILIA_TZ) #Adaptd to the target audience
 
 
