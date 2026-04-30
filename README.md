@@ -10,21 +10,37 @@ A Discord bot that automatically collects news from multiple RSS feeds, uses Goo
 
 ```
 discord-news-bot/
-├── news_bot.py        # Main bot file — all logic lives here
+├── main.py            # Application entry point
+├── bot.py             # Discord bot logic, scheduling, and commands
+├── collector.py       # RSS feed collection and parsing logic
+├── config.py          # Configuration settings and news feed lists
+├── gemini.py          # Gemini API integration and prompt structuring
 ├── requirements.txt   # Python dependencies
 ├── Procfile           # Tells Railway how to start the bot
 ├── .gitignore         # Prevents sensitive files from being pushed to GitHub
-└── .env               # Secret credentials — NOT pushed to GitHub
+├── bot.log            # Local execution logs
+└── .env               # Needs to be created - contains secret credentials
 ```
 
-### `news_bot.py`
+### `main.py`
 
-The core of the project. Contains:
+The main entry point that initializes and runs the application.
 
-- RSS feed collection from 22 sources (12 general, 10 tech)
-- Gemini API integration for news analysis and summarization
-- Discord bot setup with scheduled and on-demand digest posting
-- Message chunking logic to respect Discord's 2000-character limit
+### `bot.py`
+
+Contains the Discord bot setup, scheduled digest posting, on-demand commands, and message chunking logic to respect Discord's 2000-character limit.
+
+### `collector.py`
+
+Handles the connection and data extraction from the 22 RSS sources (12 general, 10 tech).
+
+### `gemini.py`
+
+Manages the integration with the Google Gemini API to analyze the collected news, eliminate redundancies, and generate the final summaries.
+
+### `config.py`
+
+Stores all the source links, feeds, and general configuration parameters for easy access and modification.
 
 ### `requirements.txt`
 
@@ -32,15 +48,15 @@ Lists all Python libraries the project depends on. Railway reads this file autom
 
 ### `Procfile`
 
-Tells Railway's build system how to start the application. Uses `worker` (not `web`) because the bot does not serve HTTP requests.
+Tells Railway's build system how to start the application. Uses worker (not web) because the bot does not serve HTTP requests.
 
 ### `.gitignore`
 
-Prevents the `.env` file and `bot.log` from being accidentally pushed to GitHub.
+Prevents the .env file and bot.log from being accidentally pushed to GitHub.
 
-### `.env` _(not included — create locally)_
+### `.env (not included — create locally)`
 
-Stores your secret credentials as environment variables. Never commit this file. On Railway, set these variables directly in the project's **Variables** tab.
+Stores your secret credentials as environment variables. Never commit this file. On Railway, set these variables directly in the project's Variables tab.
 
 ---
 
